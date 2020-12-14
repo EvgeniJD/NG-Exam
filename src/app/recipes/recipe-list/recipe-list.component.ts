@@ -13,8 +13,8 @@ export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
 
   constructor(private recipeService: RecipeService,
-              private router: Router,
-              private route: ActivatedRoute) {
+    private router: Router,
+    private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -22,6 +22,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   onNewRecipe() {
-    this.router.navigate(['new'], {relativeTo: this.route});
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 }
