@@ -11,6 +11,7 @@ import { Observable, Subscription } from 'rxjs';
 import { AuthService, AuthResponseData } from './auth.service';
 import { AlertComponent } from '../shared/alert/alert.component';
 import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
+import { map, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-auth',
@@ -29,7 +30,9 @@ export class AuthComponent implements OnDestroy {
     private authService: AuthService,
     private router: Router,
     private componentFactoryResolver: ComponentFactoryResolver
-  ) {}
+  ) { 
+    
+  }
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
